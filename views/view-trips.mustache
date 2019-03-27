@@ -1,0 +1,29 @@
+<html>
+<head>
+<link rel="stylesheet" href="/css/version1/site.css"></link>
+</head>
+
+<body>
+
+
+<h1>Hey what's up it's the view-trips page</h1>
+
+<ul>
+{{#tripList}}
+<li>
+    <span>Trip name: {{triptitle}} - Depart Date: {{departdate}} - Return date: {{returndate}}</span>
+    <form action = "/remove-trip" method="POST">
+     <input type="hidden" name="cityDelete" value={{triptitle}}>
+     <button type="submit">Remove</button>
+   </form>
+</li>
+{{/tripList}}
+
+
+</ul>
+
+
+
+</body>
+
+</html>
